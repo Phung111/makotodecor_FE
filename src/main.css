@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #a8242d;
+  --color-primary-dark: #8a1e25;
+  --color-primary-light: #c62d38;
+  --color-white: #ffffff;
+  --color-white-dark: #f5f5f5;
+  --color-gray-1: #fcfcfc;
+  --color-gray-2: #f8f8f8;
+  --color-gray-3: #f2f2f2;
+  --color-gray-4: #e5e5e5;
+  --color-gray-5: #d4d4d4;
+  --color-gray-6: #a3a3a3;
+  --color-gray-7: #737373;
+  --color-gray-8: #404040;
+  --color-gray-9: #171717;
+  --color-blue-5: #85bae5;
+  --color-yellow-5: #f39c12;
+  --color-yellow-6: #f5ac47;
+  --color-orange-5: #f89853;
+  --shadow-custom-light: 0px 5px 22px rgba(0, 0, 0, 0.04);
+  --shadow-custom-medium: 0px 21px 44px rgba(0, 0, 0, 0.08);
+  --shadow-custom-neumorphic: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+  --shadow-custom-neumorphic-active: 12px 12px 24px 0 rgba(0, 0, 0, 0.2), -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+  /* --font-nunito: 'Nunito', ui-sans-serif, system-ui, sans-serif; */
+  --font-sans: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  --font-garamond: 'EB Garamond', serif;
+}
+
+@layer base {
+  :root {
+    --spacing-global: 24px;
+    /* background-color: #e0e0e0; */
+  }
+
+  a {
+    all: unset;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  p {
+    all: unset;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  input {
+    @apply w-full h-full border-0;
+  }
+
+  input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  /* .swiper-wrapper {
+    -webkit-transition-timing-function: linear !important;
+    -o-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+  } */
+}
+
+@layer components {
+  .container {
+    @apply !mx-auto px-2 md:px-6 transition-all;
+  }
+
+  .br_line {
+    @apply container h-[0.5px] bg-[#f7f7f7];
+    /* @apply container h-[0.5px] bg-[#646464]; */
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .contain {
+    @apply !mx-auto max-w-[95%];
+  }
+
+  .lucide {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+  }
+
+  /* Custom */
+  .gap_global {
+    gap: var(--spacing-global);
+  }
+
+  .p_lobal {
+    padding: var(--spacing-global);
+  }
+
+  .px_global {
+    padding-left: var(--spacing-global);
+    padding-right: var(--spacing-global);
+  }
+
+  .py_global {
+    padding-top: var(--spacing-global);
+    padding-bottom: var(--spacing-global);
+  }
+
+  .m_global {
+    margin: var(--spacing-global);
+  }
+
+  .mx_global {
+    margin-left: var(--spacing-global);
+    margin-right: var(--spacing-global);
+  }
+
+  .my_global {
+    margin-top: var(--spacing-global);
+    margin-bottom: var(--spacing-global);
+  }
+
+  @media (min-width: 768px) {
+    .lucide {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@utility catpc {
+  width: 100px;
+  height: 125px;
+  margin: 0 auto;
+  object-fit: contain;
+  background-image: url('https://res.cloudinary.com/cloudinarymen/image/upload/v1743358609/makotodecor/backgrounds/catpc_y5dnxd.png');
+  -webkit-animation: moveXpc 1s steps(32) infinite;
+  -moz-animation: moveXpc 1s steps(32) infinite;
+  -o-animation: moveXpc 1s steps(32) infinite;
+  animation: moveXpc 1s steps(32) infinite;
+}
+
+@utility catmobile {
+  width: 50px;
+  height: 63px;
+  margin: 0 auto;
+  object-fit: contain;
+  background-image: url('https://res.cloudinary.com/cloudinarymen/image/upload/v1743358607/makotodecor/backgrounds/catmobile_jmmbjw.png');
+  -webkit-animation: moveXmobile 1s steps(32) infinite;
+  -moz-animation: moveXmobile 1s steps(32) infinite;
+  -o-animation: moveXmobile 1s steps(32) infinite;
+  animation: moveXmobile 1s steps(32) infinite;
+}
+
+@-webkit-keyframes moveXpc {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -3200px;
+  }
+}
+@-moz-keyframes moveXpc {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -3200px;
+  }
+}
+@-o-keyframes moveXpc {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -3200px;
+  }
+}
+@keyframes moveXpc {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -3200px;
+  }
+}
+
+@-webkit-keyframes moveXmobile {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -1600px;
+  }
+}
+@-moz-keyframes moveXmobile {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -1600px;
+  }
+}
+@-o-keyframes moveXmobile {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -1600px;
+  }
+}
+@keyframes moveXmobile {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -1600px;
+  }
+}
