@@ -7,22 +7,29 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "git": "git add . && git commit -m 'update' && git push",
+    "up": "npm run git && npm run deploy",
+    "clear": "npm cache clean --force && Remove-Item -Recurse -Force node_modules && npm i --force"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.7",
     "animate.css": "^4.1.1",
     "antd": "^5.25.4",
+    "framer-motion": "^12.23.12",
     "lucide-react": "^0.511.0",
     "makotodecor-f": "file:",
     "react": "^19.1.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.6.0",
     "react-scroll": "^1.9.3",
     "redux": "^5.0.1",
-    "swiper": "^11.2.8"
+    "swiper": "^11.2.8",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

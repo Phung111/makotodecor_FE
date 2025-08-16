@@ -1,0 +1,16 @@
+{
+  "Menu": {
+    "productOperator": "Quản lý sản phẩm",
+    "product": "Danh sách sản phẩm",
+    "userOperator": "Quản lý người dùng",
+    "user": "Danh sách người dùng",
+    "orderOperator": "Quản lý đơn hàng",
+    "order": "Danh sách đơn hàng",
+    "imageOperator": "Quản lý hình ảnh",
+    "imageBanner": "Banner",
+    "imageProduct": "Sản phẩm",
+    "imageAdvertise": "Quảng cáo",
+    "configOperator": "Quản lý cấu hình",
+    "configCategory": "Danh sách danh mục"
+  }
+}
